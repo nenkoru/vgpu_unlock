@@ -146,6 +146,11 @@ script_source = r"""
                     spoofed_devid = 0x2230; // RTX A6000
                 }
 
+                // Ada
+                if(actual_devid == 0x2684) {
+                    spoofed_devid = 0x26b1; // RTX 6000 Ada
+                }
+
                 devid_ptr.writeU16(spoofed_devid);
                 subsysid_ptr.writeU16(spoofed_subsysid);
             }
